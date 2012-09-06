@@ -1,0 +1,93 @@
+@media only screen and (max-width: $screenSmall - 1) {
+	#stage {
+		//height: auto;
+		overflow: visible;
+
+		.twelve {
+			top: 5%;
+			margin: 0px;
+		}
+
+		.row {
+			height: auto;
+		}
+
+		.four {
+			height: auto;
+			position: relative;
+
+			h3 {
+				line-height: 25px;
+				font-size: 20px;
+				margin-top: 10px;
+			}
+
+			p {
+				margin-bottom: 0px;
+				font-size: 17px;
+
+				&:last-child {
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		.mobile-three {
+			border-right: 0px;
+			border-bottom: 1px solid rgba(#8c8c8c, 0.3);
+		}
+	}
+
+	#eye-catcher {
+		margin-top: 0px;
+
+		h1 {
+			line-height: 45px;
+		}
+
+		p {
+			line-height: 30px;
+		}
+	}
+
+	.tiles {
+		height: auto;
+
+		.columns {
+			height: 215px;
+		}
+		.columns:last-child {
+			height: auto;
+			padding-bottom: 70px;
+		}
+
+		.mobile-three {
+			h2 {
+				margin-bottom: 0px;
+				margin-top: 10px;
+			}
+
+			h3 {
+				padding: 10px 0 15px 0;
+			}
+
+			p {
+				margin-bottom: 0px;
+			}
+		}
+	}
+
+	.special-content {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+
+	.other-content {
+		background-size: 33%;
+
+		.button,
+		h3 {
+			width: 50%;
+		}
+	}
+}

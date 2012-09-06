@@ -1,0 +1,46 @@
+@media (max-width: 480px) {
+	.nav-bar {
+		margin-top: 26px;
+	}
+
+	#stage {
+		h2 {
+			font-size: 27px;
+		}
+
+		.mobile-three {
+			border-right: 0px;
+			border-bottom: 1px solid rgba(#8c8c8c, 0.3);
+
+			&:last-child {
+				border: 0px;
+			}
+		}
+	}
+
+	#eye-catcher {
+		h1 {
+			font-size: 35px;
+			line-height: 35px;
+		}
+
+		p {
+			font-size: 25px;
+			line-height: 25px;
+		}
+	}
+
+	.tiles {
+		.columns {
+			height: 170px;
+		}
+	}
+
+	.other-content {
+
+		background-size: 33%;
+		.button {
+			width: 50%;
+		}
+	}
+}
