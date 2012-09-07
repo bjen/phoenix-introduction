@@ -20,103 +20,105 @@
 header .nine {
 	padding: 0px;
 }
-.navbar {
-	margin: 40px 0 0 0;
-	background: transparent;
-	float: right;
-	list-style-position: inside;
-	position: relative;
+@media only screen and (min-width: $screenSmall + 1) {
+	.navbar {
+		margin: 40px 0 0 0;
+		background: transparent;
+		float: right;
+		list-style-position: inside;
+		position: relative;
 
-	li {
-		display: inline;
-		float: left;
-
-		ul {
-			display: none;
-		}
-
-		a {
-			color: #464646;
-			font-size: 18px;
-			text-transform: uppercase;
-			font-weight: bold;
-			padding: 5px 15px 5px 15px;
+		li {
+			display: inline;
 			float: left;
-		}
 
-		&.active {
-			background: $orange;
+			ul {
+				display: none;
+			}
 
 			a {
-				color: $white;
+				color: #464646;
+				font-size: 18px;
+				text-transform: uppercase;
+				font-weight: bold;
+				padding: 5px 15px 5px 15px;
+				float: left;
+			}
+
+			&.active {
+				background: $orange;
+
+				a {
+					color: $white;
+				}
+
+				ul {
+					display: block;
+					float: left;
+				}
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				background: $orange;
+
+				a {
+					color: $white;
+				}
+
+				ul {
+					display: block;
+					float: left;
+				}
 			}
 
 			ul {
-				display: block;
-				float: left;
+				position: absolute;
+				top: 31px;
+				margin-left: 0px;
+				background: url(../images/nav-arrow.gif) 12px 9px no-repeat;
+				padding: 16px 0 0 0;
+
+				li {
+					background: #464646 url(../images/nav-divider.gif) left 50% no-repeat;
+					padding: 0px 8px;
+
+					&:hover,
+					&:focus {
+						background: #464646 url(../images/nav-divider.gif) left 50% no-repeat;
+					}
+
+					a {
+						color: $white;
+						text-transform: none;
+						font-size: 12px;
+						font-weight: normal;
+						padding: 0px 8px;
+						height: 24px;
+						line-height: 24px;
+
+						&:hover,
+						&:focus,
+						&:active {
+							background: #333;
+						}
+					}
+
+					&:first-child {
+						background: #464646;
+					}
+				}
 			}
 		}
 
 		&:hover,
-		&:active,
-		&:focus {
-			background: $orange;
-
-			a {
-				color: $white;
-			}
-
-			ul {
-				display: block;
-				float: left;
-			}
-		}
-
-		ul {
-			position: absolute;
-			top: 31px;
-			margin-left: 0px;
-			background: url(../images/nav-arrow.gif) 12px 9px no-repeat;
-			padding: 16px 0 0 0;
-
-			li {
-				background: #464646 url(../images/nav-divider.gif) left 50% no-repeat;
-				padding: 0px 8px;
-
-				&:hover,
-				&:focus {
-					background: #464646 url(../images/nav-divider.gif) left 50% no-repeat;
+		&:focus,
+		&:active {
+			li.active {
+				ul {
+					display: none !important;
 				}
-
-				a {
-					color: $white;
-					text-transform: none;
-					font-size: 12px;
-					font-weight: normal;
-					padding: 0px 8px;
-					height: 24px;
-					line-height: 24px;
-
-					&:hover,
-					&:focus,
-					&:active {
-						background: #333;
-					}
-				}
-
-				&:first-child {
-					background: #464646;
-				}
-			}
-		}
-	}
-
-	&:hover,
-	&:focus,
-	&:active {
-		li.active {
-			ul {
-				display: none !important;
 			}
 		}
 	}

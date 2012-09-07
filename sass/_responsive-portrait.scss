@@ -1,11 +1,9 @@
 @media only screen and (max-width: $screenSmall) {
-	.nav-bar {
+	.navbar {
 		font-size: 14px;
 
-		> li {
-			> a,
-			> a:first-child,
-			> a:last-child {
+		li {
+			a {
 				font-size: 14px;
 			}
 		}
