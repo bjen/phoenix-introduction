@@ -17,62 +17,106 @@
 	float: left;
 }
 // Navigation
-.nav-bar {
+header .nine {
+	padding: 0px;
+}
+.navbar {
 	margin: 40px 0 0 0;
-	font-size: 18px;
 	background: transparent;
 	float: right;
+	list-style-position: inside;
+	position: relative;
 
-	> li {
-		border: 0px;
-		@include box-shadow(0 0 0 transparent);
+	li {
+		display: inline;
+		float: left;
 
-		> a,
-		> a:first-child,
-		> a:last-child {
-			color: #4D4D4D;
+		ul {
+			display: none;
+		}
+
+		a {
+			color: #464646;
 			font-size: 18px;
 			text-transform: uppercase;
 			font-weight: bold;
-			padding: 0 15px 0 15px;
-
-			&:hover,
-			&:active,
-			&:focus {
-				background: $orange;
-				color: $white;
-			}
-		}
-
-		&:last-child {
-			border: 0px;
+			padding: 5px 15px 5px 15px;
+			float: left;
 		}
 
 		&.active {
-			background: transparent;
-			border: 0px;
+			background: $orange;
+
 			a {
-				background: $orange;
 				color: $white;
 			}
 
+			ul {
+				display: block;
+				float: left;
+			}
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			background: $orange;
+
+			a {
+				color: $white;
+			}
+
+			ul {
+				display: block;
+				float: left;
+			}
+		}
+
+		ul {
+			position: absolute;
+			top: 31px;
+			margin-left: 0px;
+			background: url(../images/nav-arrow.gif) 12px 9px no-repeat;
+			padding: 16px 0 0 0;
+
 			li {
+				background: #464646 url(../images/nav-divider.gif) left 50% no-repeat;
+				padding: 0px 8px;
+
+				&:hover,
+				&:focus {
+					background: #464646 url(../images/nav-divider.gif) left 50% no-repeat;
+				}
+
 				a {
-					background: transparent;
+					color: $white;
+					text-transform: none;
+					font-size: 12px;
+					font-weight: normal;
+					padding: 0px 8px;
+					height: 24px;
+					line-height: 24px;
+
+					&:hover,
+					&:focus,
+					&:active {
+						background: #333;
+					}
+				}
+
+				&:first-child {
+					background: #464646;
 				}
 			}
 		}
-		ul {
-			background: #464646;
-			border: 0px;
+	}
 
-			li {
-				border: 0px;
-				display: inline;
-
-				a {
-					border: 0px;
-				}
+	&:hover,
+	&:focus,
+	&:active {
+		li.active {
+			ul {
+				display: none !important;
 			}
 		}
 	}

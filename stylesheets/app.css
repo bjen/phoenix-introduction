@@ -4751,74 +4751,103 @@ that IE7/8 do not support :nth-child.
 }
 
 /* line 20, ../sass/_base.scss */
-.nav-bar {
+header .nine, header .row .nine, .row header .nine {
+  padding: 0px;
+}
+
+/* line 23, ../sass/_base.scss */
+.navbar {
   margin: 40px 0 0 0;
-  font-size: 18px;
   background: transparent;
   float: right;
+  list-style-position: inside;
+  position: relative;
 }
-/* line 26, ../sass/_base.scss */
-.nav-bar > li {
-  border: 0px;
-  -webkit-box-shadow: 0 0 0 transparent;
-  -moz-box-shadow: 0 0 0 transparent;
-  box-shadow: 0 0 0 transparent;
+/* line 30, ../sass/_base.scss */
+.navbar li {
+  display: inline;
+  float: left;
 }
-/* line 32, ../sass/_base.scss */
-.nav-bar > li > a,
-.nav-bar > li > a:first-child,
-.nav-bar > li > a:last-child {
-  color: #4D4D4D;
+/* line 34, ../sass/_base.scss */
+.navbar li ul {
+  display: none;
+}
+/* line 38, ../sass/_base.scss */
+.navbar li a {
+  color: #464646;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 0 15px 0 15px;
-}
-/* line 41, ../sass/_base.scss */
-.nav-bar > li > a:hover, .nav-bar > li > a:active, .nav-bar > li > a:focus,
-.nav-bar > li > a:first-child:hover,
-.nav-bar > li > a:first-child:active,
-.nav-bar > li > a:first-child:focus,
-.nav-bar > li > a:last-child:hover,
-.nav-bar > li > a:last-child:active,
-.nav-bar > li > a:last-child:focus {
-  background: #f18e00;
-  color: white;
+  padding: 5px 15px 5px 15px;
+  float: left;
 }
 /* line 47, ../sass/_base.scss */
-.nav-bar > li:last-child {
-  border: 0px;
-}
-/* line 51, ../sass/_base.scss */
-.nav-bar > li.active {
-  background: transparent;
-  border: 0px;
-}
-/* line 54, ../sass/_base.scss */
-.nav-bar > li.active a {
+.navbar li.active {
   background: #f18e00;
+}
+/* line 50, ../sass/_base.scss */
+.navbar li.active a {
   color: white;
 }
-/* line 60, ../sass/_base.scss */
-.nav-bar > li.active li a {
-  background: transparent;
+/* line 54, ../sass/_base.scss */
+.navbar li.active ul {
+  display: block;
+  float: left;
+}
+/* line 62, ../sass/_base.scss */
+.navbar li:hover, .navbar li:active, .navbar li:focus {
+  background: #f18e00;
 }
 /* line 65, ../sass/_base.scss */
-.nav-bar > li ul {
-  background: #464646;
-  border: 0px;
+.navbar li:hover a, .navbar li:active a, .navbar li:focus a {
+  color: white;
 }
 /* line 69, ../sass/_base.scss */
-.nav-bar > li ul li {
-  border: 0px;
-  display: inline;
+.navbar li:hover ul, .navbar li:active ul, .navbar li:focus ul {
+  display: block;
+  float: left;
 }
-/* line 73, ../sass/_base.scss */
-.nav-bar > li ul li a {
-  border: 0px;
+/* line 75, ../sass/_base.scss */
+.navbar li ul {
+  position: absolute;
+  top: 31px;
+  margin-left: 0px;
+  background: url(../images/nav-arrow.gif) 12px 9px no-repeat;
+  padding: 16px 0 0 0;
+}
+/* line 82, ../sass/_base.scss */
+.navbar li ul li {
+  background: #464646 url(../images/nav-divider.gif) left 50% no-repeat;
+  padding: 0px 8px;
+}
+/* line 87, ../sass/_base.scss */
+.navbar li ul li:hover, .navbar li ul li:focus {
+  background: #464646 url(../images/nav-divider.gif) left 50% no-repeat;
+}
+/* line 91, ../sass/_base.scss */
+.navbar li ul li a {
+  color: white;
+  text-transform: none;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0px 8px;
+  height: 24px;
+  line-height: 24px;
+}
+/* line 102, ../sass/_base.scss */
+.navbar li ul li a:hover, .navbar li ul li a:focus, .navbar li ul li a:active {
+  background: #333;
+}
+/* line 107, ../sass/_base.scss */
+.navbar li ul li:first-child {
+  background: #464646;
+}
+/* line 118, ../sass/_base.scss */
+.navbar:hover li.active ul, .navbar:focus li.active ul, .navbar:active li.active ul {
+  display: none !important;
 }
 
-/* line 81, ../sass/_base.scss */
+/* line 125, ../sass/_base.scss */
 #stage {
   background: url(../images/header-community.jpg) 50% top no-repeat;
   background-size: auto;
@@ -4830,7 +4859,7 @@ that IE7/8 do not support :nth-child.
   overflow: hidden;
   position: relative;
 }
-/* line 90, ../sass/_base.scss */
+/* line 134, ../sass/_base.scss */
 #stage h2 {
   margin: 0px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
@@ -4838,52 +4867,52 @@ that IE7/8 do not support :nth-child.
   font-size: 45px;
   text-transform: uppercase;
 }
-/* line 98, ../sass/_base.scss */
+/* line 142, ../sass/_base.scss */
 #stage p {
   font-family: 'Share-Tech', Arial, sans-serif;
 }
-/* line 99, ../sass/_base.scss */
+/* line 143, ../sass/_base.scss */
 #stage p.author {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   float: right;
 }
-/* line 107, ../sass/_base.scss */
+/* line 151, ../sass/_base.scss */
 #stage .twelve {
   position: absolute;
   top: 50%;
   margin-top: -25%;
 }
-/* line 112, ../sass/_base.scss */
+/* line 156, ../sass/_base.scss */
 #stage .row {
   position: absolute;
   bottom: 0px;
   margin: 0px;
 }
-/* line 118, ../sass/_base.scss */
+/* line 162, ../sass/_base.scss */
 #stage .four {
   background: rgba(0, 0, 0, 0.4);
   border-right: 1px solid rgba(140, 140, 140, 0.3);
 }
-/* line 122, ../sass/_base.scss */
+/* line 166, ../sass/_base.scss */
 #stage .four h3 {
   font-size: 23px;
   line-height: 37px;
   text-transform: uppercase;
   margin-bottom: 0px;
 }
-/* line 129, ../sass/_base.scss */
+/* line 173, ../sass/_base.scss */
 #stage .four p {
   font-size: 18px;
   line-height: 19px;
   font-family: 'share-regularregular', Arial, sans-serif;
 }
 
-/* line 138, ../sass/_base.scss */
+/* line 182, ../sass/_base.scss */
 #eye-catcher {
   text-align: center;
   margin-top: 30px;
 }
-/* line 142, ../sass/_base.scss */
+/* line 186, ../sass/_base.scss */
 #eye-catcher h1 {
   font-size: 45px;
   line-height: 37px;
@@ -4891,18 +4920,18 @@ that IE7/8 do not support :nth-child.
   margin-bottom: 0px;
   color: #464646;
 }
-/* line 149, ../sass/_base.scss */
+/* line 193, ../sass/_base.scss */
 #eye-catcher h1 strong {
   color: #f18e00;
 }
-/* line 154, ../sass/_base.scss */
+/* line 198, ../sass/_base.scss */
 #eye-catcher p {
   font-size: 30px;
   color: #7c7c7c;
   font-family: 'share-regularregular', Arial, sans-serif;
 }
 
-/* line 161, ../sass/_base.scss */
+/* line 205, ../sass/_base.scss */
 .special-content {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f4f4f4), color-stop(100%, #f9f9f9));
   background-image: -webkit-linear-gradient(#f4f4f4, #f9f9f9);
@@ -4915,34 +4944,34 @@ that IE7/8 do not support :nth-child.
   padding: 45px 0 45px 0;
 }
 
-/* line 169, ../sass/_base.scss */
+/* line 213, ../sass/_base.scss */
 .tiles {
   position: relative;
   height: 100%;
   height: 400px;
 }
-/* line 174, ../sass/_base.scss */
+/* line 218, ../sass/_base.scss */
 .tiles .columns {
   padding: 0px;
   height: 100%;
   overflow: hidden;
   color: white;
 }
-/* line 180, ../sass/_base.scss */
+/* line 224, ../sass/_base.scss */
 .tiles .columns:last-child {
   padding: 0 15px 0 15px;
   background: #f18e00;
 }
-/* line 186, ../sass/_base.scss */
+/* line 230, ../sass/_base.scss */
 .tiles img {
   z-index: -1;
 }
-/* line 190, ../sass/_base.scss */
+/* line 234, ../sass/_base.scss */
 .tiles h2 {
   color: white;
   font-size: 26px;
 }
-/* line 195, ../sass/_base.scss */
+/* line 239, ../sass/_base.scss */
 .tiles h3 {
   position: absolute;
   left: 0px;
@@ -4954,12 +4983,12 @@ that IE7/8 do not support :nth-child.
   margin: 0px;
   padding: 15px 0 15px 0;
 }
-/* line 207, ../sass/_base.scss */
+/* line 251, ../sass/_base.scss */
 .tiles p {
   color: white;
 }
 
-/* line 212, ../sass/_base.scss */
+/* line 256, ../sass/_base.scss */
 .other-content {
   background-color: #f2f2f2;
   background-repeat: no-repeat;
@@ -4969,22 +4998,22 @@ that IE7/8 do not support :nth-child.
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3) inset;
   padding: 25px 0 0px 0;
 }
-/* line 220, ../sass/_base.scss */
+/* line 264, ../sass/_base.scss */
 .other-content .row .row {
   margin: 0px;
 }
-/* line 223, ../sass/_base.scss */
+/* line 267, ../sass/_base.scss */
 .other-content .row .row .columns {
   padding: 0px;
 }
-/* line 229, ../sass/_base.scss */
+/* line 273, ../sass/_base.scss */
 .other-content h2 {
   font-size: 26px;
   color: #222222;
   font-weight: normal;
   font-family: 'share-regularregular', Arial, sans-serif;
 }
-/* line 236, ../sass/_base.scss */
+/* line 280, ../sass/_base.scss */
 .other-content h3 {
   font-size: 21px;
   color: #7C7C7C;
@@ -4992,12 +5021,12 @@ that IE7/8 do not support :nth-child.
   font-family: 'share-regularregular', Arial, sans-serif;
   line-height: 26px;
 }
-/* line 243, ../sass/_base.scss */
+/* line 287, ../sass/_base.scss */
 .other-content .button {
   margin-bottom: 20px;
 }
 
-/* line 249, ../sass/_base.scss */
+/* line 293, ../sass/_base.scss */
 footer {
   background: white;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
@@ -5006,25 +5035,25 @@ footer {
   color: #464646;
   margin-top: -2px;
 }
-/* line 255, ../sass/_base.scss */
+/* line 299, ../sass/_base.scss */
 footer a {
   color: #464646;
 }
-/* line 260, ../sass/_base.scss */
+/* line 304, ../sass/_base.scss */
 footer a:hover, footer a:active, footer a:focus {
   color: #222222;
 }
-/* line 266, ../sass/_base.scss */
+/* line 310, ../sass/_base.scss */
 footer ul.side-nav li {
   display: inline;
   margin-right: 10px;
 }
-/* line 270, ../sass/_base.scss */
+/* line 314, ../sass/_base.scss */
 footer ul.side-nav li a {
   display: inline;
   padding-right: 10px;
 }
-/* line 277, ../sass/_base.scss */
+/* line 321, ../sass/_base.scss */
 footer p {
   padding: 17px 0 17px 0;
 }
